@@ -2,63 +2,170 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Decipher Tees</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Decipher Shirts — Under Construction</title>
+  <meta name="description" content="Decipher Shirts — a visual puzzle streetwear brand. Launching soon." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="data:image/svg+xml,  <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256'><rect width='256' height='256' rx='48' fill='black'/><path d='M128 56C76 56 40 128 40 128s36 72 88 72 88-72 88-72-36-72-88-72Zm0 112a40 40 0 1 1 40-40 40 40 0 0 1-40 40Z' fill='white'/></svg>">
 </head>
 <body>
+  <div class="bg media-bg" aria-hidden="true"></div>
+  <div class="bg grain" aria-hidden="true"></div>
   <header class="site-header">
-    <div class="container">
-      <h1 class="logo">Decipher Tees</h1>
-      <nav class="nav">
-        <ul>
-          <li><a href="#features">Features</a></li>
-          <li><a href="#products">Products</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
+    <div class="container header-inner">
+      <a class="brand" href="#" aria-label="Decipher Shirts home">
+        <span class="brand-mark" aria-hidden="true">
+          <!-- Simple triangular eye glyph -->
+          <svg viewBox="0 0 120 120" role="img" aria-label="Decipher mark">
+            <path class="tri" d="M60 8 8 104h104L60 8Z"/>
+            <ellipse class="eye" cx="60" cy="70" rx="28" ry="18"/>
+            <circle class="pupil" cx="60" cy="70" r="8"/>
+          </svg>
+        </span>
+        <span class="brand-text">DECIPHER<span class="accent">/</span>SHIRTS</span>
+      </a>
+
+      <nav class="top-nav">
+        <a href="#drop" class="pill">Join the Drop</a>
+        <a href="#teasers" class="ghost">Teasers</a>
+        <a href="#contact" class="ghost">Contact</a>
       </nav>
-      <button class="menu-toggle">☰</button>
     </div>
   </header>
 
-  <section class="hero">
-    <div class="container">
-      <h2>Wear Your Code</h2>
-      <p>Discover fun, clever visual puns on premium tees.</p>
-      <a href="#products" class="btn">Shop Now</a>
-    </div>
-  </section>
+  <main id="top">
+    <section class="hero" id="drop" aria-labelledby="hero-title">
+      <div class="scanlines" aria-hidden="true"></div>
+      <div class="container hero-inner">
+        <h1 id="hero-title" class="glitch" data-text="DECIPHER">DECIPHER</h1>
+        <p class="tag">Visual puzzles. Streetwear energy. Figure it out.</p>
 
-  <section id="products" class="products">
-    <div class="container">
-      <div class="product-card">
-        <img src="https://via.placeholder.com/300x300" alt="Eye + Heart + Bee Tee" />
-        <h3>Eye + Heart + Bee Tee</h3>
-        <p>$24.99</p>
-        <button class="btn">Add to Cart</button>
-      </div>
-      <div class="product-card">
-        <img src="https://via.placeholder.com/300x300" alt="Ghost + Boo Tee" />
-        <h3>Ghost + Boo Tee</h3>
-        <p>$24.99</p>
-        <button class="btn">Add to Cart</button>
-      </div>
-      <div class="product-card">
-        <img src="https://via.placeholder.com/300x300" alt="Pizza Pie Tee" />
-        <h3>Pizza Pie Tee</h3>
-        <p>$24.99</p>
-        <button class="btn">Add to Cart</button>
-      </div>
-    </div>
-  </section>
+        <div class="countdown" role="timer" aria-live="polite">
+          <div class="timebox"><span id="dd">00</span><label>days</label></div>
+          <div class="timebox"><span id="hh">00</span><label>hours</label></div>
+          <div class="timebox"><span id="mm">00</span><label>mins</label></div>
+          <div class="timebox"><span id="ss">00</span><label>secs</label></div>
+        </div>
 
-  <footer id="contact" class="site-footer">
-    <div class="container">
-      <p>&copy; 2025 Decipher Tees. All rights reserved.</p>
-      <p><a href="mailto:hello@deciphertees.com">hello@deciphertees.com</a></p>
+        <form class="cta" id="notify-form">
+          <input type="email" id="email" name="email" placeholder="you@email.com" aria-label="Email address" required />
+          <button type="submit" class="pill primary">Notify Me</button>
+        </form>
+
+        <p class="micro">
+          or email us directly:
+          <button class="copy" type="button" data-copy="deciphershirts@gmail.com">
+            deciphershirts@gmail.com
+          </button>
+          <span class="copied" id="copied" role="status" aria-live="polite"></span>
+        </p>
+      </div>
+      <div class="hero-credit">
+        Photo via Unsplash
+      </div>
+    </section>
+
+    <section class="teasers" id="teasers" aria-labelledby="tease-title">
+      <div class="container">
+        <h2 id="tease-title">Crack the Code</h2>
+        <p class="lead">Each design hides a phrase. Read the symbols. Say it out loud. No cap.</p>
+
+        <div class="grid">
+          <!-- Card 1 -->
+          <article class="card reveal">
+            <img src="https://images.unsplash.com/photo-1503341455253-b2e723bb3dbb?q=80&w=1600&auto=format&fit=crop" alt="Neon city alley" loading="lazy" />
+            <div class="overlay">
+              <span class="puzzle">👁 ♥ 🐝</span>
+              <span class="answer">I love <b>bee</b>s → “I love <b>boobies</b>”</span>
+            </div>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="card reveal">
+            <img src="https://images.unsplash.com/photo-1532298229144-0ec0c57515c7?q=80&w=1600&auto=format&fit=crop" alt="Black t-shirt mockup" loading="lazy" />
+            <div class="overlay">
+              <span class="puzzle">🎤 + ❄</span>
+              <span class="answer">Mic + ice → “Mike Ice”</span>
+            </div>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="card reveal">
+            <img src="https://images.unsplash.com/photo-1520975922203-bafedd4210f3?q=80&w=1600&auto=format&fit=crop" alt="Studio lights" loading="lazy" />
+            <div class="overlay">
+              <span class="puzzle">🧠 + ⚡</span>
+              <span class="answer">Brain + bolt → “Brainstorm”</span>
+            </div>
+          </article>
+
+          <!-- Card 4 -->
+          <article class="card reveal">
+            <img src="https://images.unsplash.com/photo-1515215376803-119c3b42414e?q=80&w=1600&auto=format&fit=crop" alt="Graffiti wall" loading="lazy" />
+            <div class="overlay">
+              <span class="puzzle">🏀 + 👑</span>
+              <span class="answer">Ball + king → “Ball King”</span>
+            </div>
+          </article>
+
+          <!-- Card 5 -->
+          <article class="card reveal">
+            <img src="https://images.unsplash.com/photo-1516641395420-2c764eb1a675?q=80&w=1600&auto=format&fit=crop" alt="Minimal studio" loading="lazy" />
+            <div class="overlay">
+              <span class="puzzle">🌊 + 👟</span>
+              <span class="answer">Wave + kicks → “Wave Kicks”</span>
+            </div>
+          </article>
+
+          <!-- Card 6 -->
+          <article class="card reveal">
+            <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?q=80&w=1600&auto=format&fit=crop" alt="Hype crowd" loading="lazy" />
+            <div class="overlay">
+              <span class="puzzle">🙏 + 🧢</span>
+              <span class="answer">On God + no cap</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="about" aria-labelledby="about-title">
+      <div class="container about-inner">
+        <h2 id="about-title">What is Decipher?</h2>
+        <p>
+          A puzzle-first tee brand. A wink to the ones who get it. We make clean, premium blanks with
+          coded graphics that read like a riddle — part street, part brain-teaser.
+        </p>
+        <ul class="bullets">
+          <li>Ultra-soft 6.5oz tees (classic fit)</li>
+          <li>Screenprinted & DTG drops</li>
+          <li>Limited runs — numbered labels</li>
+          <li>Designed in California</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="contact" id="contact" aria-labelledby="contact-title">
+      <div class="container contact-inner">
+        <h2 id="contact-title">Say Hi</h2>
+        <p>Collaborations, wholesale, or to pitch a puzzle idea.</p>
+        <a class="pill" href="mailto:deciphershirts@gmail.com?subject=Decipher%20Shirts%20Inquiry">deciphershirts@gmail.com</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Decipher Shirts — All rights reserved.</p>
+      <p class="tiny">Photos courtesy of Unsplash creators. This site is a concept “under construction” teaser.</p>
     </div>
   </footer>
 
+  <script>
+    window.__LAUNCH_TS__ = new Date("2025-09-15T17:00:00-07:00").getTime(); // change as needed
+  </script>
   <script src="script.js"></script>
 </body>
 </html>
